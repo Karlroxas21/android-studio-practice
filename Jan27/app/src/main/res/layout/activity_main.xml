@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/spiderImage"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:src="@drawable/spideylupet" />
+
+    <Button
+        android:id="@+id/pressmeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="500dp"
+        android:text="Right X" />
+
+    <Button
+        android:id="@+id/pressmeagainBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pressmeBtn"
+        android:layout_marginLeft="105dp"
+        android:text="Left X" />
+
+    <Button
+        android:id="@+id/pressmeBtnY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="500dp"
+        android:layout_toRightOf="@id/pressmeBtn"
+        android:text="Up Y" />
+
+    <Button
+        android:id="@+id/pressmeagainBtnY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pressmeBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/pressmeagainBtn"
+        android:text="DOwn Y" />
+
+</RelativeLayout>
