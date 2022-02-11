@@ -32,21 +32,21 @@ public class MainActivity extends AppCompatActivity {
         names.add("Beatrice");
         names.add("Don");
 
-        ArrayList<String> universities = new ArrayList<>();
-        universities.add("National University");
-        universities.add("FEU");
-        universities.add("UST");
-        universities.add("DLSU");
-        universities.add("UE");
+//        ArrayList<String> universities = new ArrayList<>();
+//        universities.add("National University");
+//        universities.add("FEU");
+//        universities.add("UST");
+//        universities.add("DLSU");
+//        universities.add("UE");
 
         ArrayAdapter<String> namesAdopter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, names);
 
-        ArrayAdapter<String> universitiesAdopter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, universities);
+//        ArrayAdapter<String> universitiesAdopter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, universities);
 
 
         listView.setAdapter(namesAdopter);
 
-        spinner.setAdapter(universitiesAdopter);
+//        spinner.setAdapter(universitiesAdopter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -54,5 +54,18 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Hi " + names.get(position), Toast.LENGTH_SHORT).show();
             }
         });
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this, "I am from " + spinner.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
         }
     }

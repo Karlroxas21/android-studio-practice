@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+    <string name="app_name">ListViewandSpinner</string>
+    <string-array name="universities">
+        <item>Pambansang Unibersidad</item>
+        <item>ep ih yu</item>
+        <item>yu ih</item>
+        <item>yu es ti</item>
+        <item>yu pih</item>
+        <item>di el es yu</item>
+    </string-array>
+</resources>

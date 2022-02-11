@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ListViewandSpinner</string>
+    <string-array name="universities">
+        <item>National University</item>
+        <item>FEU</item>
+        <item>UE</item>
+        <item>UST</item>
+        <item>UP</item>
+        <item>DLSU</item>
+    </string-array>
 </resources>
