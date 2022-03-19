@@ -57,6 +57,7 @@ public class Database extends SQLiteOpenHelper {
         } else{
             return false;
         }
+
     }
 
     public Boolean deleteUserData(String name){

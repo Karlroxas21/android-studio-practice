@@ -53,20 +53,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case(R.id.updateButton):
                 Boolean checkUpdateData = db.updateUserData(name, contactNum);
 
-                if(checkUpdateData){
-                    Toast.makeText(MainActivity.this, "Entry Updated", Toast.LENGTH_SHORT).show();
-                }else{
+                if(!checkUpdateData){
                     Toast.makeText(MainActivity.this, "Enter Not Updated", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(MainActivity.this, "Entry Updated", Toast.LENGTH_SHORT).show();
                 }
                 break;
 
             case(R.id.deleteButton):
                 Boolean checkDeleteData = db.deleteUserData(name);
 
-                if(checkDeleteData){
-                    Toast.makeText(MainActivity.this, "Entry Deleted", Toast.LENGTH_SHORT).show();
-                }else{
+                if(!checkDeleteData){
                     Toast.makeText(MainActivity.this, "Entry Not Deleted", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(MainActivity.this, "Entry Deleted", Toast.LENGTH_SHORT).show();
                 }
                 break;
 
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 StringBuffer buffer = new StringBuffer();
                 while(res.moveToNext()){
-                    buffer.append("Name: " + res.getString(0) + "\n");
+                    buffer.append("\n" + "Name: " + res.getString(0) + "\n");
                     buffer.append("Contact: " + res.getString(1) + "\n");
                 }
 
